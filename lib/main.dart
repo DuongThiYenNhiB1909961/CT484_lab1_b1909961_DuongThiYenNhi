@@ -4,6 +4,7 @@ import 'ui/products/products_manager.dart';
 import 'ui/products/product_detail_creen.dart';
 
 import 'ui/products/product_overview_creen.dart';
+import 'ui/products/user_products_screen.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -25,9 +26,11 @@ class MyApp extends StatelessWidget {
           secondary: Colors.deepOrange,
         ),
       ),
-      home: const SafeArea(
-        child: ProductsOverviewSreen(),
-        ),
+      home: const SafeArea(child: UserProductsSreen(),
+      ),
+      //b3 home: const SafeArea(
+      //   child: ProductsOverviewSreen(),
+      //   ),
       //b1_2 home: SafeArea(
       //   //b1 color: Colors.green,
       //   child: ProductDetailScreen(
