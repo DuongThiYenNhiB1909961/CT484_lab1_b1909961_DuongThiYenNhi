@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'ui/products/products_manager.dart';
 import 'ui/products/product_detail_creen.dart';
 
+import 'ui/products/product_overview_creen.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -24,12 +25,15 @@ class MyApp extends StatelessWidget {
           secondary: Colors.deepOrange,
         ),
       ),
-      home: SafeArea(
-        //b1 color: Colors.green,
-        child: ProductDetailScreen(
-          ProductsManager().items[0],
+      home: const SafeArea(
+        child: ProductsOverviewSreen(),
         ),
-      ),
+      //b1_2 home: SafeArea(
+      //   //b1 color: Colors.green,
+      //   child: ProductDetailScreen(
+      //     ProductsManager().items[0],
+      //   ),
+      // ),
     );
   }
 }
