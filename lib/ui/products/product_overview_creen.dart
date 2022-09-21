@@ -5,6 +5,9 @@ import 'package:myshopp/ui/products/products_grid.dart';
 import 'product_grid_tile.dart';
 import '../shared/app_drawer.dart';
 
+import '../cart/car_manager.dart';
+import 'top_right_badge.dart';
+
 enum FilterOptions { favorites, all }
 
 class ProductsOverviewSreen extends StatefulWidget {
@@ -33,14 +36,17 @@ class _ProductsOverviewSreenState extends State<ProductsOverviewSreen> {
   }
 
   Widget buildShoppingCartIcon() {
-    return IconButton(
-      icon: const Icon(
-        Icons.shopping_cart,
-      ),
-      onPressed: () {
-        Navigator.of(context).pushNamed(CartScreen.routeName);
+    return TopRightBadge(
+      data: CartManager().productCount,
+      child: IconButton(
+        icon: const Icon(
+          Icons.shopping_cart,
+        ),
+        onPressed: () {
+          Navigator.of(context).pushNamed(CartScreen.routeName);
         // print('Go to cart screen');
-      },
+        },
+      ),
     );
   }
 
